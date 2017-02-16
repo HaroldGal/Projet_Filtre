@@ -1,15 +1,26 @@
 include("genY.jl")
 
+
 N = 10000 # nombre de calculs pour notre probabilite
+
+# initialisation de nos constantes
+n=10
+A = get_matrix_vp_grande(n)
+b = rand(n,1)
+c = rand(1,n)
 d=1
-k = 2
+
+# quel k ?
+k = 1
 pas = 0.1 # 21 nombres de points de notre fonction  (2/0.1+1)
-d_max=(k+1)*d # on pose un d constant pour tous nos filtres
+d_max=d
+d_max = d+(c*b)[1]
+d_max = round(d_max*10)/10
 #y_k_values = collect(-d_max:pas:d_max) #borne à définir
 #y_k_values_stock = zeros(length(y_k_values))
 y_k_values_dict = Dict()
 # init
-for i in -d_max*10:pas:d_max*10
+for i in -d_max:pas:d_max
   y_k_values_dict[i] = 0
 end
 
