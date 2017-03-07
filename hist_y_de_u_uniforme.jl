@@ -1,5 +1,6 @@
 include("genY.jl")
-using Plots
+
+using PyPlot
 
 N = 100000 # nombre de calculs pour notre probabilite
 
@@ -10,7 +11,7 @@ b = rand(n,1)
 c = rand(1,n)
 d=1
 # quel k ?
-k = 1
+k = 2
 pas = 0.1 # 21 nombres de points de notre fonction  (2/0.1+1)
 
 # on determine nos bornes
@@ -31,7 +32,10 @@ for i in 1:N # debut de notre tirage aléatoire
   y_k = get_y_k(u,A,b,c,d,k)
   indice_liste = round(Int,(y_k-ymin)/pas+1) # pour trouver l'indice qui convient
   occurence_y_k[indice_liste] +=1
+
 end
+occurence_y_k = occurence_y_k / N
 l=collect(ymin:pas:ymax)
-display(plot(l,occurence_y_k))
+l=collect(ymin:pas:ymax)
+plot(l,occurence_y_k)
 println("Done")
