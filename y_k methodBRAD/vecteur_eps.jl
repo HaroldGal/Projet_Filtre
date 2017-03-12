@@ -5,12 +5,12 @@ function matrice_eps(k)
   for i in 0:n-1
     #on binarise notre nombre
     binarise=bin(i,k)
-    #on transforme notre nombre binarise en chaine de cara
+    #on transforme notre nombre binarise en liste de caractere
     caractere=collect(binarise)
     print(caractere[1])
     for j in 1:k
       if caractere[j]=='1'
-        print("Jusque ici tout va bien")
+        
           m[i+1,j]=1
 
       else
