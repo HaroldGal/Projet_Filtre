@@ -2,7 +2,7 @@
 function get_matrix_vp_grande(n)
   #renvoie une matrice carrée n inversible avec des valeurs propres proches de 1
   matrixDiagVP = eye(n)
-  B = rand(900:1000,10)/1000 # liste de n rand entre 0.9 et 1
+  B = rand(900:1000,n)/1000 # liste de n rand entre 0.9 et 1
   matrixDiagVP = matrixDiagVP.*B # multiplication membre par membre de matrice
   P = rand(n,n)
   return P*matrixDiagVP*inv(P)
