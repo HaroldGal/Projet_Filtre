@@ -7,7 +7,7 @@ function matrice_eps(k)
     binarise=bin(i,k)
     #on transforme notre nombre binarise en une liste de caractere
     caractere=collect(binarise)
-    #on parcourt la liste de caractere et si on a un 1 on le garde mais en version entiere et si 0 on le transformeen -1
+    #on parcourt la liste de caractere et si on a un 1 on le garde mais en version entiere et si 0 on le transforme en -1
     for j in 1:k
       if caractere[j]=='1'
           m[i+1,j]=1
