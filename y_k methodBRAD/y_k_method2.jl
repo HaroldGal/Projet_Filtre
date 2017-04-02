@@ -3,7 +3,9 @@
 include("matrice_eps.jl")
 include("somme_eps.jl")
 include("produit.jl")
-function y_k_method2(x,k,h)
+
+function y_k_method2(x,h)
+  k = length(h)
   n=length(x)
   y=zeros(n)
   # on va commencer par initialiser la matrice qui va contenir nos epsilon pour les combinaisons de -1 et 1 et on va itérer à partir de ça
@@ -20,9 +22,11 @@ function y_k_method2(x,k,h)
 
   return y # on renvoie le vecteur y
 end
+#=
 h= [1,2]
 x=collect(-3:0.1:3)
-y = y_k_method2(x,2,h)
+y = y_k_method2(x,h)
 print("Finished")
 using PyPlot
 plot(x,y)
+=#
