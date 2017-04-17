@@ -21,10 +21,11 @@ function y_k_method2(x,h)
   return y # on renvoie le vecteur y
 end
 
-
+#=
 h= ones(16)
 x=collect(-3:0.1:3)
 y = y_k_method2(x,h)
 print("Finished")
 using PyPlot
 plot(x,y)
+=#
