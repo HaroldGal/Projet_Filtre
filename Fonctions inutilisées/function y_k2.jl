@@ -25,7 +25,7 @@ function y_k2(x,h0,h1,h2)
 	
 		#cas 1 sous cas 4
         while(-h0-h1+h2 <= x[i] < min(-h0+h1+h2,-h0+h1-h2))
-        	y[i] = = x[i]^2/(8*h0*h1) + x[i]*(-4*h1-2*h2)/(8*h0*h1)+(-h0^2+3*h1^2+h2^2-2*h0*h1+2*h1*h2-2*h0*h2)/(8*h0*h1)
+        	y[i] = x[i]^2/(8*h0*h1) + x[i]*(-4*h1-2*h2)/(8*h0*h1)+(-h0^2+3*h1^2+h2^2-2*h0*h1+2*h1*h2-2*h0*h2)/(8*h0*h1)
         	i=i+1
         end
 
@@ -121,7 +121,7 @@ function y_k2(x,h0,h1,h2)
 
         #cas 6 sous cas 2
         while(h0-h1-h2 <= x[i] < min(h0-h1+h2,h0+h1-h2))
-        	y[i] = = -x[i]^2/(8*h0*h1) + x[i]*(2*h0-h2)/(4*h0*h1) + (-3*h0^2+h1^2-h2^2+4*h0*h2+2*h0*h1)/(8*h0*h1)
+        	y[i] = -x[i]^2/(8*h0*h1) + x[i]*(2*h0-h2)/(4*h0*h1) + (-3*h0^2+h1^2-h2^2+4*h0*h2+2*h0*h1)/(8*h0*h1)
         	i=i+1
         end
 
