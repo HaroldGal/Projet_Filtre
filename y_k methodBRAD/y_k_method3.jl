@@ -8,6 +8,7 @@ function y_k_method3(x,h)
   curser = 4
   T = gen_T(h,curser)
   k = length(h)
+  k_parite = (k%2==0)?0:1
   n=length(x)
   y=zeros(n)
     sum=zeros(n) # on reinitalise la somme pour chaque x[i]
@@ -16,7 +17,7 @@ function y_k_method3(x,h)
       for i in 1:length(T)
         someps = someps + T[i][((m>>(4*(i-1)))&15)+1]
       end
-      sum=sum+((x+someps).^(k-1)).*sign(x+someps).*(((k-count_ones(m))%2==0)?1:-1) #on realise l'opération principale
+      sum=sum+((x+someps).^(k-1)).*sign(x+someps).*(((k-count_ones(m))%2==k_parite)?1:-1) #on realise l'opération principale
     end
   y=sum/(2^(k+1)*produit(h)*factorial(k-1)) # on divise
 
