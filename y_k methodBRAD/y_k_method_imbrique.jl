@@ -1,7 +1,7 @@
 # fonction qui prend en argument un vecteur x donné, un rang k et renvoie la distribution de y_k
 include("produit.jl")
 include("generation_T.jl")
-function y_k_method3(x,h)
+function y_k_method_imbrique(x,h)
   curser = 4
   T = gen_T(h,curser)
   k = length(h)
