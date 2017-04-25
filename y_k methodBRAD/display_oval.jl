@@ -18,7 +18,7 @@ function display_ovale(h,A,B,C)
   for i in 1:n
     M+=(abs(R[i])/(1-abs(decomp[:values][i])))*(abs(decomp[:values][i])/maximum(decomp[:values]))
   end
-  a = maximum(decomp[:values])^(n+1)*M
+  a = maximum(decomp[:values])^(k+1)*M
   curser = 4
   T = gen_T(h,curser)
   k = length(h)
