@@ -1,9 +1,8 @@
 #Ceci est un script générant le graph pour un filtre linéaire.
-include("y_k methodBRAD/y_k_method3.jl")
-include("Traces_experimentales/genA.jl")
-
-k = 20  #initialisation du nombre de passage du filtre
-
+#include("y_k methodBRAD/y_k_method3.jl")
+#include("Traces_experimentales/genA.jl")
+include("y_k methodBRAD/display_ovale.jl")
+k=12
 #----- Creation des propriétés initiales du filtre
 n = 10 # taille de nos matrice propriétés du filtre
 A = get_matrix_vp_grande(n)
@@ -28,3 +27,4 @@ y = y_k_method3(x,h)
 toc()
 using PyPlot
 plot(x,y)
+display_ovale(h,A,b,c)
