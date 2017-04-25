@@ -91,13 +91,10 @@ function random_dSS(n=10, p=1, q=1)
           end
     end
 
-     # Finally, apply a transformation so that A is not block-diagonal.
-
-    #    T = randn(n, n)
+    T = randn(n, n)
 
 
-  #    A = dot(solve(T, A), T)  # A = T \ A * T
-
+  A = *((T\ A), T)  # A = T \ A * T
 
 
     # Make the remaining matrices.
@@ -150,5 +147,3 @@ return ( Matrix(A), Matrix(B), Matrix(C), Matrix(D))
 
 
 end
-
-a,b,c,d=random_dSS()
