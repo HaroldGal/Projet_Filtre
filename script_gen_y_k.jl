@@ -1,7 +1,7 @@
 #Ceci est un script générant le graph pour un filtre linéaire.
 include("y_k methodBRAD/y_k_method3.jl")
 include("Traces_experimentales/genA.jl")
-include("y_k methodBRAD/display_ovale.jl")
+#include("y_k methodBRAD/display_oval.jl")
 include("y_k methodBRAD/y_k_method_imbrique.jl")
 k=20
 #----- Creation des propriétés initiales du filtre
@@ -33,11 +33,10 @@ print("Temps execution methode non imbriqué : ")
 tic()
 y = y_k_method3(x,h)
 toc()
-print("Temps execution methode non imbriqué : ")
+print("Temps execution methode imbriqué : ")
 tic()
 y = y_k_method_imbrique(x,h)
 toc()
 using PyPlot
-
 plot(x,y)
 #display_ovale(h,A,b,c,s)
