@@ -18,10 +18,11 @@ function display_ovale(h,A,B,C)
   for i in 1:n
     M+=(abs(R[i])/(1-abs(decomp[:values][i])))*(abs(decomp[:values][i])/maximum(decomp[:values])) #ATTENTION ICI maximum(abs(decomp[:values])
   end
+  k = length(h) #mis ici
   a = maximum(decomp[:values])^(k+1)*M #ATTENTION ICI maximum(abs(decomp[:values])
   curser = 4
   T = gen_T(h,curser)
-  k = length(h)
+  #k = length(h)
   b = 0.02
   for m in 0:2^k-1 # on  parcourt toutes les combinaison de -1 et 2^k
     someps=0
