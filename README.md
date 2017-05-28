@@ -2,7 +2,6 @@
 
 This is a project about Linear filtering in Julia realized by Harold Gallice, Colette Voisembert and Kayim Said Bacar between February and June 2017
 ## Subject
-Etude de la densité de probabilité de la sortie d'un filtre LTI à différents ordres ayant une entrée uniformément distribuée.
 Study of the probablity density of the output of LTI Filter at different order with a uniform distribution as input.
 * *Graphiques :* Several graphs useful for the project
 * *Trace experimental :* Simulate 100 000 samples to get an experimental view of the distribution of a filter at an order k and then plot the histogram
