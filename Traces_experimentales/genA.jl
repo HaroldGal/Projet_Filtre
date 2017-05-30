@@ -25,3 +25,14 @@ function get_matrix_vp_rand(n)
     P = rand(n,n)
     return P*matrixDiagVP*inv(P)
 end
+
+
+function get_matrix_vp_moyenne(n)
+    #renvoie une matrice carré n inversible avec des valeurs propres aleatoire < 0.5
+    matrixDiagVP = zeros(n,n)
+    for i=1:n
+      matrixDiagVP[i,i]=rand(1:500)/1000
+    end
+    P = rand(n,n)
+    return P*matrixDiagVP*inv(P)
+end

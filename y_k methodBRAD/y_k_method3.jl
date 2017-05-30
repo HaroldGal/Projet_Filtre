@@ -1,6 +1,5 @@
 
 # fonction qui prend en argument un vecteur x donné, un rang k et renvoie la distribution de y_k
-include("somme_eps.jl")
 include("produit.jl")
 include("generation_T.jl")
 
