@@ -1,13 +1,10 @@
-﻿# Projet_Filtre
-Projet 2017 filtrage en Julia
+# Projet_Filtre
 
-
-https://github.com/HaroldGal/Projet_Filtre
-
-## Sujet
-Etude de la densité de probabilité de la sortie d'un filtre LTI à différents ordres ayant une entrée uniformément distribuée.
-
-* *Graphiques :* banque de graphiques, png pour le rapport.
-* *Trace experimental :* simule 100 000 tirages pour avoir une approche experimentale de la repartition du filtre à l'ordre k, affiche ensuite l'histogramme.
+This is a project about Linear filtering in Julia realized by Harold Gallice, Colette Voisembert and Kayim Said Bacar between February and June 2017
+## Subject
+Study of the probablity density of the output of LTI Filter at different order with a uniform distribution as input.
+* *Graphiques :* Several graphs useful for the project
+* *Trace experimental :* Simulate 100 000 samples to get an experimental view of the distribution of a filter at an order k and then plot the histogram
 * *y_k methodBRAD :* implémente la méthode BRAD pour générer un histogramme théorique de la repartition du filtre a l'ordre k.
-* *Fonctions inutilisées :* ensemble de fonction ayant été exploitées et encore exploitables
+Implemen ,the method to calculate the sum of uniform random variables from the article of David M. Bradley and Ramesh C. Gupta,and thus  generate  the distribution of a filtrer LTI at an order k
+* *Fonctions inutilisées :* set of functions which could be used for later or other purposes or has been used and now obsolete
