@@ -1,8 +1,8 @@
-#Cette application permet de verifier nos calculs analytiques en matlab. elle effectue un nombre N de tirages aléatoires et affiche leur repartition après être passé k fois dans un filtre caractérisé par des matrices A b c et d
-
+%Cette application permet de verifier nos calculs analytiques en matlab. elle effectue un nombre N de tirages alÃ©atoires et affiche leur repartition aprÃ¨s Ãªtre passÃ© k fois dans un filtre caractÃ©risÃ© par des matrices A b c et d
+%densitÃ© de y(k) alÃ©atoirement
 
 +function script()
-+N = 1000000; %nombre de calculs pour notre probabilité
++N = 1000000; %nombre de calculs pour notre probabilitÃ©
 +
 +% initialisation de nos constantes
 +n=10;
@@ -15,7 +15,7 @@
 +
 +y_values = [];
 +
-+for i=1:N % debut de notre tirage aléatoire
++for i=1:N % debut de notre tirage alÃ©atoire
 +  u= zeros(k+1,1);
 +  for j=1:k+1
 +    u(j)= rand_uniform(-1, 1);
@@ -33,7 +33,7 @@
 +end
 +
 +function res2 = get_matrix_vp_grande(n)
-+  %renvoie une matrice carrée n inversible avec des valeurs propres proches de 1
++  %renvoie une matrice carrÃ©e n inversible avec des valeurs propres proches de 1
 +  matrixDiagVP = eye(n);
 +  B = rand_uniform(0.9, 1); % liste de n rand entre 0.9 et 1
 +  matrixDiagVP = matrixDiagVP.*B; % multiplication membre par membre de matrice
