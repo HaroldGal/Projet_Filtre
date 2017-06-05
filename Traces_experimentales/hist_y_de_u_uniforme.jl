@@ -1,5 +1,7 @@
 include("genY.jl")
 
+#Cette application permets de verifier nos calculs analytiques. elle effectue un nombre N de tirage aléatoire et affiche leur repartition.
+
 using PyPlot
 
 N = 100000 # nombre de tirages pour notre probabilite
@@ -31,7 +33,7 @@ for i in 1:N # debut de notre tirage aléatoire
   end
   y_k = get_y_k(u,A,b,c,d,k)
   indice_liste = round(Int,(y_k-ymin)/pas+1) # pour trouver l'indice qui convient
-  occurence_y_k[indice_liste] +=1
+  occurence_y_k[indice_liste] +=1 #un de plus a cet endroit la.
 
 end
 occurence_y_k = occurence_y_k / N

@@ -1,13 +1,13 @@
-#Ceci est un script générant le graph pour un filtre linéaire.
+#Ceci est un script générant les graph pour un filtre linéaire.
 include("y_k methodBRAD/y_k_method3.jl")
 include("Traces_experimentales/genA.jl")
 #include("y_k methodBRAD/display_oval.jl")
 include("y_k methodBRAD/y_k_method_imbrique.jl")
 
-for k in 2:20
+for k in 2:20 # les k pour lesquels on veut afficher et sauvegarder les graphes
 #----- Creation des propriétés initiales du filtre
 n = 5 # taille de nos matrice propriétés du filtre
-srand(10) # pour poser une graine random pour les tests
+srand(10) # pour poser une graine pour les tests
 A = get_matrix_vp_grande(n)
 b = rand(n,1)
 c = rand(1,n)
@@ -28,8 +28,8 @@ print("Temps execution methode non imbriqué : ")
 y = y_k_method3(x,h)
 using PyPlot
 plot(x,y)
-savefig("C:/Users/Harold/Desktop/Projet Filtre/graph_beamer/cc-$k.png")
+savefig("C:/Users/Harold/Desktop/Projet Filtre/graph_beamer/cc-$k.png") #Ici votre chemin pour enregistrer le ficher format : 'cc-$k.png' pour le beamer.
 println("figure $k enregistée")
 close()
-#display_ovale(h,A,b,c,s)
+#display_ovale(h,A,b,c,s) # a choisir.
 end

@@ -1,6 +1,8 @@
+#Cree une matrice T comprennant les sommes precalculees des h. voir le rapport.
 include("vecteur_eps2.jl")
 function gen_T(h_list,n)
-  combin=matrice_eps2(n)
+# h la liste des h du filtre precalcules. n en paquet de combien nous allons separer les h. On choisit generalement n = 4
+  combin=matrice_eps2(n) # tableau de 2^n case contenant les combinaisons des -1 et 1 possibles
   incomplet = 0
   T = [Array{Float64}(2^n) for idx in 1:div(length(h_list)-1,n)+1]
   for j in 1:div(length(h_list)-1,n)+1

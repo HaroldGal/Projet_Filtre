@@ -1,4 +1,5 @@
-# fonction qui prend en argument un vecteur x donné, un rang k et renvoie la distribution de y_k
+# fonction qui prend en argument un vecteur x donné, un rang k et renvoie la distribution de y_k optimisee.
+# cette fonction fonctionne pour k = 20 au max.
 include("produit.jl")
 include("generation_T.jl")
 function y_k_method_imbrique(x,h)
