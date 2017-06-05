@@ -1,6 +1,6 @@
 include("genY.jl")
 
-#Cette application permets de verifier nos calculs analytiques. elle effectue un nombre N de tirage aléatoire et affiche leur repartition.
+#Cette application permet de verifier nos calculs analytiques. elle effectue un nombre N de tirages aléatoires et affiche leur repartition.
 
 using PyPlot
 
