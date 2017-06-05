@@ -16,13 +16,12 @@ Pyplot (pour julia)
 Repository :
 Graphiques : Several graphs useful for the project
 Trace experimental : Simulate 100 000 samples to get an experimental view of the distribution of a filter at an order k and then plot the histogram
-y_k methodBRAD : Implement ,the method to calculate the sum of uniform random variables from the article of David M. Bradley and Ramesh C. Gupta,and thus  generate  the distribution of a filtrer LTI at an order k
+y_k methodBRAD : Implement the method to calculate the sum of uniform random variables from the article of David M. Bradley and Ramesh C. Gupta,and thus  generate  the distribution of a filtrer LTI at an order k
 * *Fonctions inutilisées :* set of functions which could be used for later or other purposes or has been used and now obsolete
 
 Scripts :
 
-script_gen_yl : Le principal Script de notre projet. Il génère une densité de de probabilite y(k) pour un k donné. Il prends également en compte les caractéristiques A,b,c, et d du filtre. Il permet de nombreuses observations.
- The main script of the project. Generate a density of probablity y(k) for a fixed k. It's also using differents parameters of the Filter (Matrix A, vector b,c and real d). Allows users to several observations.
+script_gen_yl : The main script of the project. Generate a density of probablity y(k) for a fixed k. It's also using differents parameters of the Filter (Matrix A, vector b,c and real d). Allows users to several observations.
 Language : Julia
 Packages  needed :
 Pyplot (for julia)
